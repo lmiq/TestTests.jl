@@ -1,6 +1,6 @@
-using TesItemRunner
+using TestItemRunner
 
-@tesitem "TestTests.jl" begin
+@testitem "TestTests.jl" begin
     @test true
 end
 

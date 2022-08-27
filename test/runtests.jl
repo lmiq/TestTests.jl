@@ -1,6 +1,7 @@
-using TestTests
-using Test
+using TesItemRunner
 
-@testset "TestTests.jl" begin
-    # Write your tests here.
+@tesitem "TestTests.jl" begin
+    @test true
 end
+
+@run_package_tests

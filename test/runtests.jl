@@ -1,7 +1,8 @@
 using TestItemRunner
 
 @testitem "TestTests.jl" begin
-    @test true
+    using TestTests
+    @test f(1) == 1
 end
 
 @run_package_tests

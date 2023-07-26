@@ -4,10 +4,17 @@ using TestItems
 
 export f
 
-f(x) = 1
+f(;g::Union{H,Nothing}=nothing) where {H<:Function} = g(1) 
+#f(;g) = g(1) 
+
+@testitem "Aqua" begin
+    import Aqua
+    Aqua.test_all(TestTests)
+end
 
 @testitem "my test" begin
-    @test f(1) == 1
+    g(x) = 1
+    @test f(g(1)) == 1
 end
 
 end
